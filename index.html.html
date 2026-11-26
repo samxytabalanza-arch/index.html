@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSIT Health | Compassionate & Modern Healthcare Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        teal: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                        slate: {
+                            850: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-slate-700 bg-slate-50 antialiased selection:bg-teal-100 selection:text-teal-900">
+
+    <div class="bg-teal-900 text-teal-50 text-xs sm:text-sm py-2.5 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-4">
+                <span class="flex items-center gap-1.5">
+                    <i data-lucide="phone-call" class="w-3.5 h-3.5 text-teal-300"></i>
+                    <span>24/7 Emergency Line: <strong class="text-white font-semibold">(800) 555-0199</strong></span>
+                </span>
+                <span class="hidden md:inline text-teal-600">|</span>
+                <span class="hidden md:flex items-center gap-1.5">
+                    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-teal-300"></i>
+                    <span>450 Wellness Boulevard, Suite 200</span>
+                </span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Urgent Care Open Now</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+
+                <a href="#" class="flex items-center gap-2.5 group">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-600 to-cyan-600 flex items-center justify-center text-white shadow-md shadow-teal-600/20 group-hover:scale-105 transition-transform">
+                        <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <span
+                            class="font-display font-bold text-xl text-slate-900 tracking-tight block leading-none">Aetheris<span
+                                class="text-teal-600">Health</span></span>
+                        <span class="text-[11px] font-medium text-slate-400 tracking-wider uppercase">Medical
+                            Center</span>
+                    </div>
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home"
+                        class="text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors">Home</a>
+                    <a href="#services"
+                        class="text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors">Services</a>
+                    <a href="#about"
+                        class="text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors">About Us</a>
+                    <a href="#contact"
+                        class="text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors">Contact</a>
+                </nav>
+
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="#appointment"
+                        class="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-md shadow-teal-600/20 hover:shadow-lg hover:shadow-teal-600/30 transition-all">
+                        <i data-lucide="calendar-plus" class="w-4 h-4"></i>
+                        <span>Book Appointment</span>
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" aria-label="Toggle Menu"
+                    class="md:hidden p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-2 shadow-lg">
+            <a href="#home"
+                class="mobile-link block px-3 py-2.5 rounded-xl text-base font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-700">Home</a>
+            <a href="#services"
+                class="mobile-link block px-3 py-2.5 rounded-xl text-base font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-700">Services</a>
+            <a href="#about"
+                class="mobile-link block px-3 py-2.5 rounded-xl text-base font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-700">About
+                Us</a>
+            <a href="#contact"
+                class="mobile-link block px-3 py-2.5 rounded-xl text-base font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-700">Contact</a>
+            <div class="pt-3">
+                <a href="#appointment"
+                    class="mobile-link w-full flex items-center justify-center gap-2 bg-teal-600 text-white font-semibold px-5 py-3 rounded-xl shadow-md">
+                    <i data-lucide="calendar-plus" class="w-4 h-4"></i>
+                    <span>Book Appointment</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="home"
+        class="relative overflow-hidden bg-gradient-to-b from-teal-50/70 via-sky-50/40 to-white pt-14 pb-20 lg:pt-24 lg:pb-28">
+
+        <div
+            class="absolute top-0 right-0 -translate-y-12 translate-x-1/4 w-96 h-96 bg-teal-200/30 rounded-full blur-3xl pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-96 h-96 bg-sky-200/30 rounded-full blur-3xl pointer-events-none">
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+            <div class="space-y-6">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-100/80 text-teal-800 text-xs sm:text-sm font-semibold">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-teal-600"></i>
+                    <span>Trusted, Patient-Centered Healthcare</span>
+                </div>
+
+                <h1
+                    class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] max-w-4xl mx-auto">
+                    Modern Medicine Meets <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-cyan-600">Compassionate
+                        Care.</span>
+                </h1>
+
+                <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                    From preventive family wellness to specialized diagnostics and 24/7 urgent support, our
+                    board-certified clinical team is dedicated to your lifelong health and peace of mind.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+                    <a href="#appointment"
+                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg shadow-teal-600/25 hover:-translate-y-0.5 transition-all">
+                        <span>Schedule a Visit</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#services"
+                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 font-semibold px-8 py-4 rounded-2xl border border-slate-200 shadow-sm hover:border-teal-200 transition-all">
+                        <i data-lucide="stethoscope" class="w-4 h-4 text-teal-600"></i>
+                        <span>Explore Specialties</span>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-10 max-w-3xl mx-auto">
+                    <div
+                        class="bg-white/90 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-5 shadow-sm flex items-center gap-4 text-left">
+                        <div
+                            class="w-11 h-11 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0">
+                            <i data-lucide="smile" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <p class="font-display text-2xl font-bold text-slate-900">99%</p>
+                            <p class="text-xs text-slate-500">Patient Satisfaction</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white/90 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-5 shadow-sm flex items-center gap-4 text-left">
+                        <div
+                            class="w-11 h-11 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center shrink-0">
+                            <i data-lucide="award" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <p class="font-display text-2xl font-bold text-slate-900">45+</p>
+                            <p class="text-xs text-slate-500">Medical Specialists</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white/90 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-5 shadow-sm flex items-center gap-4 text-left">
+                        <div
+                            class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                            <i data-lucide="clock" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <p class="font-display text-2xl font-bold text-slate-900">24/7</p>
+                            <p class="text-xs text-slate-500">Urgent & Telehealth</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span
+                    class="inline-block text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3.5 py-1.5 rounded-full">Comprehensive
+                    Care</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">Specialized
+                    Medical Services Tailored to You</h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    We combine advanced medical technology with personalized attention across six core departments to
+                    keep you and your family thriving.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div
+                    class="group bg-slate-50/70 hover:bg-white rounded-3xl p-8 border border-slate-200/80 hover:border-teal-200 hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-teal-100/80 text-teal-700 group-hover:bg-teal-600 group-hover:text-white flex items-center justify-center mb-6 transition-colors">
+                            <i data-lucide="stethoscope" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold text-slate-900 mb-3">Primary Care</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Routine checkups, preventive screenings, immunizations, and chronic condition management
+                            focused on your long-term overall wellness.
+                        </p>
+                    </div>
+                    <a href="#appointment" onclick="preselectService('Primary Care')"
+                        class="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-600 group-hover:text-teal-700">
+                        <span>Book Primary Visit</span>
+                        <i data-lucide="chevron-right"
+                            class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="group bg-slate-50/70 hover:bg-white rounded-3xl p-8 border border-slate-200/80 hover:border-sky-200 hover:shadow-xl hover:shadow-sky-900/5 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-700 group-hover:bg-sky-600 group-hover:text-white flex items-center justify-center mb-6 transition-colors">
+                            <i data-lucide="baby" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold text-slate-900 mb-3">Pediatrics</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Gentle, specialized healthcare for infants, children, and adolescents—covering developmental
+                            milestones, wellness exams, and sick visits.
+                        </p>
+                    </div>
+                    <a href="#appointment" onclick="preselectService('Pediatrics')"
+                        class="inline-flex items-center gap-1.5 text-sm font-semibold text-sky-600 group-hover:text-sky-700">
+                        <span>Book Pediatric Visit</span>
+                        <i data-lucide="chevron-right"
+                            class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="group bg-slate-50/70 hover:bg-white rounded-3xl p-8 border border-slate-200/80 hover:border-teal-200 hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-rose-100/80 text-rose-600 group-hover:bg-rose-600 group-hover:text-white flex items-center justify-center mb-6 transition-colors">
+                            <i data-lucide="heart-pulse" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold text-slate-900 mb-3">Cardiology</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Comprehensive heart health evaluations, echocardiograms, stress testing, and personalized
+                            cardiovascular prevention and recovery plans.
+                        </p>
+                    </div>
+                    <a href="#appointment" onclick="preselectService('Cardiology')"
+                        class="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-600 group-hover:text-teal-700">
+                        <span>Consult a Cardiologist</span>
+                        <i data-lucide="chevron-right"
+                            class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="group bg-slate-50/70 hover:bg-white rounded-3xl p-8 border border-slate-200/80 hover:border-teal-200 hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-indigo-100/80 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white flex items-center justify-center mb-6 transition-colors">
+                            <i data-lucide="microscope" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold text-slate-900 mb-3">Diagnostics & Lab</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            On-site digital imaging, MRI, ultrasound, and rapid clinical pathology laboratories
+                            delivering accurate results within hours.
+                        </p>
+                    </div>
+                    <a href="#appointment" onclick="preselectService('Diagnostics')"
+                        class="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-600 group-hover:text-teal-700">
+                        <span>Schedule Lab / Imaging</span>
+                        <i data-lucide="chevron-right"
+                            class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="group bg-slate-50/70 hover:bg-white rounded-3xl p-8 border border-slate-200/80 hover:border-teal-200 hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-amber-100/80 text-amber-700 group-hover:bg-amber-600 group-hover:text-white flex items-center justify-center mb-6 transition-colors">
+                            <i data-lucide="siren" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold text-slate-900 mb-3">Emergency & Urgent Care</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Rapid-response trauma and urgent medical attention available 24/7 with minimal wait times
+                            and board-certified emergency physicians.
+                        </p>
+                    </div>
+                    <a href="#appointment" onclick="preselectService('Emergency Care')"
+                        class="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-600 group-hover:text-teal-700">
+                        <span>Check Urgent Wait Times</span>
+                        <i data-lucide="chevron-right"
+                            class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="group bg-slate-50/70 hover:bg-white rounded-3xl p-8 border border-slate-200/80 hover:border-teal-200 hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-cyan-100/80 text-cyan-700 group-hover:bg-cyan-600 group-hover:text-white flex items-center justify-center mb-6 transition-colors">
+                            <i data-lucide="video" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold text-slate-900 mb-3">Telemedicine</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Secure HD video consultations, digital prescriptions, and follow-up care from the comfort
+                            and privacy of your own home.
+                        </p>
+                    </div>
+                    <a href="#appointment" onclick="preselectService('Telemedicine')"
+                        class="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-600 group-hover:text-teal-700">
+                        <span>Start Virtual Visit</span>
+                        <i data-lucide="chevron-right"
+                            class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 lg:py-28 bg-slate-50 border-y border-slate-200/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span
+                        class="inline-block text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-100/70 px-3.5 py-1.5 rounded-full">About
+                        Aetheris Health</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
+                        Healthcare Built Around Listening, Empathy, and Precision.
+                    </h2>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        At Aetheris Health, we believe exceptional medical care starts with unhurried conversations. Our
+                        multidisciplinary team collaborates closely to understand your complete health story—not just
+                        isolated symptoms.
+                    </p>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Whether you are visiting for a routine annual wellness check, pediatric guidance, or advanced
+                        diagnostic testing, our facility is designed to provide calm, dignified, and coordinated care at
+                        every step.
+                    </p>
+                    <div class="pt-2">
+                        <a href="#appointment"
+                            class="inline-flex items-center gap-2 text-sm font-semibold text-teal-700 bg-teal-100/70 hover:bg-teal-100 px-5 py-3 rounded-xl transition-colors">
+                            <span>Schedule Your Care Visit</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-4">
+                    <div class="flex items-start gap-4 bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0">
+                            <i data-lucide="user-check" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-slate-900 text-lg">Patient-Centered Philosophy</h3>
+                            <p class="text-sm text-slate-600 mt-1.5 leading-relaxed">Clear explanations, transparent
+                                care plans, and shared decision-making at every step of your treatment journey.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center shrink-0">
+                            <i data-lucide="cpu" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-slate-900 text-lg">Evidence-Based Innovation</h3>
+                            <p class="text-sm text-slate-600 mt-1.5 leading-relaxed">Equipped with next-generation
+                                diagnostic imaging and integrated electronic health records for seamless coordination.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                            <i data-lucide="shield" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-slate-900 text-lg">Coordinated Continuity of Care
+                            </h3>
+                            <p class="text-sm text-slate-600 mt-1.5 leading-relaxed">Seamless collaboration between
+                                primary care, diagnostics, and telehealth so you never feel left navigating healthcare
+                                alone.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="appointment"
+        class="py-20 lg:py-28 bg-gradient-to-br from-teal-900 via-teal-800 to-slate-900 text-white relative overflow-hidden">
+        <!-- Subtle Decorative Pattern -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none"
+            style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <span
+                        class="inline-block text-xs font-bold uppercase tracking-wider text-teal-200 bg-teal-800/80 border border-teal-600/50 px-3.5 py-1.5 rounded-full">
+                        Easy Online Scheduling
+                    </span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
+                        Book Your Appointment in Under Two Minutes.
+                    </h2>
+                    <p class="text-teal-100/90 text-base leading-relaxed">
+                        Choose your preferred department, visit type (in-person or telehealth), and convenient time
+                        slot. Our care coordinators will confirm your appointment promptly.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-center gap-3.5">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-teal-700/70 flex items-center justify-center text-teal-200 shrink-0">
+                                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-sm text-teal-50">Most major insurance plans accepted</span>
+                        </div>
+                        <div class="flex items-center gap-3.5">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-teal-700/70 flex items-center justify-center text-teal-200 shrink-0">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-sm text-teal-50">Same-day & next-day urgent slots available</span>
+                        </div>
+                        <div class="flex items-center gap-3.5">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-teal-700/70 flex items-center justify-center text-teal-200 shrink-0">
+                                <i data-lucide="lock" class="w-5 h-5"></i>
+                            </div>
+                            <span class="text-sm text-teal-50">HIPAA-compliant & 100% confidential</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="bg-white text-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl">
+                        <div id="booking-success" class="hidden text-center py-8 space-y-4">
+                            <div
+                                class="w-16 h-16 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center mx-auto">
+                                <i data-lucide="check-circle" class="w-9 h-9"></i>
+                            </div>
+                            <h3 class="font-display text-2xl font-bold text-slate-900">Appointment Request Received!
+                            </h3>
+                            <p id="booking-summary" class="text-slate-600 text-sm max-w-md mx-auto leading-relaxed"></p>
+                            <div class="pt-4">
+                                <button type="button" onclick="resetBookingForm()"
+                                    class="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold px-6 py-3 rounded-xl transition-colors">
+                                    Book Another Appointment
+                                </button>
+                            </div>
+                        </div>
+
+                        <form id="appointment-form" class="space-y-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="patient-name"
+                                        class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1.5">Full
+                                        Name *</label>
+                                    <input type="text" id="patient-name" required placeholder="Jane Doe"
+                                        class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all">
+                                </div>
+                                <div>
+                                    <label for="patient-phone"
+                                        class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1.5">Phone
+                                        Number *</label>
+                                    <input type="tel" id="patient-phone" required placeholder="(555) 234-5678"
+                                        class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="patient-email"
+                                        class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1.5">Email
+                                        Address *</label>
+                                    <input type="email" id="patient-email" required placeholder="jane@example.com"
+                                        class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all">
+                                </div>
+                                <div>
+                                    <label for="department-select"
+                                        class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1.5">Medical
+                                        Specialty *</label>
+                                    <select id="department-select" required
+                                        class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all">
+                                        <option value="Primary Care">Primary Care</option>
+                                        <option value="Pediatrics">Pediatrics</option>
+                                        <option value="Cardiology">Cardiology</option>
+                                        <option value="Diagnostics">Diagnostics & Lab</option>
+                                        <option value="Emergency Care">Urgent / Emergency Care</option>
+                                        <option value="Telemedicine">Telemedicine (Virtual Visit)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="preferred-date"
+                                        class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1.5">Preferred
+                                        Date *</label>
+                                    <input type="date" id="preferred-date" required
+                                        class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all">
+                                </div>
+                                <div>
+                                    <label for="visit-type"
+                                        class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1.5">Consultation
+                                        Type</label>
+                                    <select id="visit-type"
+                                        class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all">
+                                        <option value="In-Person Clinic Visit">In-Person Clinic Visit</option>
+                                        <option value="Telehealth Video Call">Telehealth Video Call</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="patient-notes"
+                                    class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1.5">Reason
+                                    for Visit / Symptoms (Optional)</label>
+                                <textarea id="patient-notes" rows="3"
+                                    placeholder="Briefly describe your symptoms, reason for visit, or questions..."
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-4 px-6 rounded-2xl shadow-lg shadow-teal-600/25 hover:shadow-xl transition-all flex items-center justify-center gap-2 text-base">
+                                <i data-lucide="calendar-check" class="w-5 h-5"></i>
+                                <span>Confirm Appointment Request</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-900 text-slate-300 pt-16 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+                <!-- Col 1: Brand & Mission -->
+                <div class="space-y-4">
+                    <a href="#" class="flex items-center gap-2.5">
+                        <div class="w-9 h-9 rounded-xl bg-teal-600 flex items-center justify-center text-white">
+                            <i data-lucide="heart-pulse" class="w-5 h-5"></i>
+                        </div>
+                        <span class="font-display font-bold text-xl text-white tracking-tight">Aetheris<span
+                                class="text-teal-400">Health</span></span>
+                    </a>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Delivering compassionate, evidence-based healthcare for every stage of life. Your health,
+                        comfort, and dignity come first.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="#contact" aria-label="Facebook"
+                            class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-teal-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+                            <i data-lucide="facebook" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#contact" aria-label="Twitter"
+                            class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-teal-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+                            <i data-lucide="twitter" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#contact" aria-label="Instagram"
+                            class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-teal-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#contact" aria-label="LinkedIn"
+                            class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-teal-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-display text-white font-bold text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#home" class="text-slate-400 hover:text-teal-400 transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-slate-400 hover:text-teal-400 transition-colors">Medical
+                                Specialties</a></li>
+                        <li><a href="#about" class="text-slate-400 hover:text-teal-400 transition-colors">About Our
+                                Clinic</a></li>
+                        <li><a href="#appointment" class="text-slate-400 hover:text-teal-400 transition-colors">Book an
+                                Appointment</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-display text-white font-bold text-base mb-4">Clinic Hours</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-400">
+                        <li class="flex justify-between">
+                            <span>Mon – Fri:</span>
+                            <span class="text-slate-200 font-medium">7:30 AM – 8:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Saturday:</span>
+                            <span class="text-slate-200 font-medium">8:30 AM – 5:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sunday:</span>
+                            <span class="text-slate-200 font-medium">9:00 AM – 3:00 PM</span>
+                        </li>
+                        <li class="pt-2 border-t border-slate-800 flex justify-between items-center">
+                            <span class="text-teal-400 font-semibold">Emergency Dept:</span>
+                            <span
+                                class="bg-teal-950 text-teal-300 border border-teal-800 text-xs font-bold px-2.5 py-0.5 rounded-full">Open
+                                24/7</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-display text-white font-bold text-base mb-4">Contact Us</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-teal-400 shrink-0 mt-1"></i>
+                            <span>450 Wellness Boulevard, Suite 200<br>Harborview Medical District</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-4 h-4 text-teal-400 shrink-0"></i>
+                            <span>Main: (800) 555-0142</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="siren" class="w-4 h-4 text-rose-400 shrink-0"></i>
+                            <span class="text-slate-200 font-medium">Emergency: (800) 555-0199</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-teal-400 shrink-0"></i>
+                            <span>care@aetherishealth.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                <p>&copy; 2026 Aetheris Health & Medical Center. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#contact" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
+                    <a href="#contact" class="hover:text-slate-300 transition-colors">Patient Rights & HIPAA</a>
+                    <a href="#contact" class="hover:text-slate-300 transition-colors">Terms of Care</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const dateInput = document.getElementById('preferred-date');
+        if (dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.setAttribute('min', today);
+            dateInput.value = today;
+        }
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        function preselectService(serviceName) {
+            const deptSelect = document.getElementById('department-select');
+            if (deptSelect) {
+                deptSelect.value = serviceName;
+            }
+        }
+
+        const appointmentForm = document.getElementById('appointment-form');
+        const bookingSuccess = document.getElementById('booking-success');
+        const bookingSummary = document.getElementById('booking-summary');
+
+        appointmentForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('patient-name').value.trim();
+            const dept = document.getElementById('department-select').value;
+            const date = document.getElementById('preferred-date').value;
+            const visitType = document.getElementById('visit-type').value;
+
+            bookingSummary.innerHTML = `Thank you, <strong class="text-slate-900">${name}</strong>. Your <strong class="text-teal-700">${visitType}</strong> request for <strong class="text-teal-700">${dept}</strong> on <strong class="text-slate-900">${date}</strong> has been logged. A care coordinator will reach out shortly to finalize your time slot.`;
+
+            appointmentForm.classList.add('hidden');
+            bookingSuccess.classList.remove('hidden');
+            lucide.createIcons();
+        });
+
+        function resetBookingForm() {
+            appointmentForm.reset();
+            const today = new Date().toISOString().split('T')[0];
+            if (dateInput) dateInput.value = today;
+            bookingSuccess.classList.add('hidden');
+            appointmentForm.classList.remove('hidden');
+        }
+    </script>
+</body>
+
+</html>
+<div id="booking-success" class="hidden py-6 space-y-6">
+    <div class="text-center space-y-3">
+        <div class="w-16 h-16 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center mx-auto">
+            <i data-lucide="check-circle" class="w-9 h-9"></i>
+        </div>
+        <h3 class="font-display text-2xl font-bold text-slate-900">Appointment Request Received!</h3>
+        <p id="booking-summary" class="text-slate-600 text-sm max-w-md mx-auto leading-relaxed"></p>
+    </div>
+
+    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 sm:p-6 text-left space-y-3">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-teal-700">Your Submitted Request</span>
+            <span
+                class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded-full">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Pending Confirmation
+            </span>
+        </div>
+        <dl id="booking-details-list" class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm"></dl>
+    </div>
+
+    <div class="text-center pt-2">
+        <button type="button" onclick="resetBookingForm()"
+            class="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-semibold px-6 py-3 rounded-xl transition-colors">
+            <i data-lucide="plus-circle" class="w-4 h-4"></i>
+            <span>Book Another Appointment</span>
+        </button>
+    </div>
+</div>
